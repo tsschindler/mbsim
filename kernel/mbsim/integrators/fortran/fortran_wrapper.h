@@ -87,13 +87,23 @@ void RADAU5(int*,void(*)(int*,double*,double*,double*,double*,int*),double*,doub
 double CONTR5(int*,double*,double*,int*);
 
 #define DDASKR FC_FUNC(ddaskr,DDASKR)
-void DDASKR(void(*)(double*,double*,double*,double*,double*, double*,int*), int*, double*, double*, double*, double*, int*, double*, double*,
+void DDASKR(void(*)(double*,double*,double*,double*,double*,int*,double*,int*), int*, double*, double*, double*, double*, int*, double*, double*,
         int*, double*, int*, int*, int*, double*, int*, void(*)(double*, double*, double*, double*, double*, double*, int*), double*,
         void(*)(int*,double*,double*,double*,int*, double*,double*,int*),int*, int*);
 
 #define MEXX FC_FUNC(mexx,MEXX)
   void mexx_(int *np,int *nv,int *nl,int *ng,int *nu,void fprob(int *np, int *nv, int *nl, int *ng, int *nu, double *t, double *p, double *v, double *u, double *rlam, int *lda, int *ldg, int *ldf, double *am, double *gp, double *fl, double *f, double *pdot, double *udot, double *g, double *gi, int *lflag, int *ifail), double *t,double *tfin, double *p,double *v,double *u,double *a,double *rlam,int *itol,double *rtol,double *atol,double *h,int *mxjob,int *ierr,int *liwk,int *iwk,int *lrwk,double *rwk,void solout(int *nr, int *np, int *nv, int *nu, int *nl,double *t , double *p, double *v, double *u, double *a, double *rlam, int *irtrn),void denout(int *nr, int *icall, int *ipol, double *t, int *nd, double *yip, int *irtrn),int *nswit,void fswit(int *np,int *nv,int *nu,int *nl,double* t,double* p,double* v,double* u,double *a,double* rlam,int *nswit,double *g),int *iswit);
 
+#define PHEM56 FC_FUNC(phem56,PHEM56)
+void PHEM56(int*,int*,int*,int*,
+         void(*)(int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,int*,double*,double*,double*,double*,double*,double*,double*,double*,double*,double*,double*,double*,double*,double*),
+         double*,double*,double*,double*,double*,double*,double*,double*,
+         double*,double*,int*,
+         void(*)(int*,int*,int*,int*,int*,int*,double*,double*,double*,double*,double*,double*),int*,
+         double*,int*,int*,int*,int*);
+
+#define POL4 FC_FUNC(pol4,POL4)
+double POL4(int*,int*,int*,int*,int*,int*,double*,double*);
 
 // END: Define as extern "C" if using a C++ compiler
 #ifdef __cplusplus

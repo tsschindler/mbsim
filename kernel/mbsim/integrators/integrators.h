@@ -35,6 +35,10 @@
 #include "theta_time_stepping_integrator.h"
 #include "euler_explicit_integrator.h"
 #include "quasi_static_integrator.h"
+#include "daskr_integrator.h"
+#include "phem56_integrator.h"
+#include "radau5dae_integrator.h"
+#include "generalized_alpha_integrator.h"
 //#include "daspk_integrator.h"
 
 #endif  /* INTEGRATORS_H_ */

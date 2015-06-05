@@ -512,6 +512,8 @@ namespace MBSim {
       void setRootID(int ID) {rootID = ID;}
       int getRootID() const {return rootID;}
       void setq(const fmatvec::Vec& q_){ q = q_;}
+      void setu(const fmatvec::Vec& u_){ u = u_;}
+      void setx(const fmatvec::Vec& x_){ x = x_;}
       void setLa(const fmatvec::Vec& la_){ la = la_;}
 
     protected:

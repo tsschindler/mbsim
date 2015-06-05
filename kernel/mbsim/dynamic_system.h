@@ -237,6 +237,8 @@ namespace MBSim {
       const fmatvec::SqrMat3& getOrientation() const { return APF; }
       const Frame* getFrameOfReference() const { return R; };
 
+      const fmatvec::Vec& getqd() const {return qd;}
+      const fmatvec::Vec& getud(int i = 0) const {return ud[i];}
       const fmatvec::Vec& getxd() const { return xd; };
       fmatvec::Vec& getxd() { return xd; };
       const fmatvec::Vec& getx0() const { return x0; };
@@ -253,6 +255,8 @@ namespace MBSim {
 
       const fmatvec::Mat& getW(int i=0) const { return W[i]; }
       fmatvec::Mat& getW(int i=0) { return W[i]; }
+      const fmatvec::Vec& getwb() const { return wb; }
+      fmatvec::Vec& getwb() { return wb; }
       const fmatvec::Mat& getV(int i=0) const { return V[i]; }
       fmatvec::Mat& getV(int i=0) { return V[i]; }
 
@@ -262,6 +266,8 @@ namespace MBSim {
       fmatvec::Vec& getg() { return g; }
       const fmatvec::Vec& getgd() const { return gd; }
       fmatvec::Vec& getgd() { return gd; }
+      const fmatvec::Vec& getgdd() const { return gdd; }
+      fmatvec::Vec& getgdd() { return gdd; }
       const fmatvec::Vec& getrFactor() const { return rFactor; }
       fmatvec::Vec& getrFactor() { return rFactor; }
       fmatvec::Vec& getsv() { return sv; }
@@ -811,7 +817,7 @@ namespace MBSim {
       /** 
        * \brief relative distances and velocities
        */
-      fmatvec::Vec g, gd;
+      fmatvec::Vec g, gd, gdd;
 
       /**
        * \brief TODO
